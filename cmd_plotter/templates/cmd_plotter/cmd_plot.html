@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Color-Magnitude Diagram (CMD)</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Color-Magnitude Diagram (CMD)</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Generate Plot</button>
+    </form>
+    <div id="plotly-div">{{ plot_div|safe }}</div>
+</body>
+</html>
